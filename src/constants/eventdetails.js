@@ -1,6 +1,6 @@
 export const event = {
     handle: 'AWSPune',
-    hashtags: "#ACDPune2022 #AWSPune2022 #BuildWithDhiWise💻"
+    hashtags: "ACDPune2022,AWSPune2022,BuildWithDhiWise💻"
 }
 
 // export const event = {
