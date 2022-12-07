@@ -34,7 +34,7 @@ const GiveawayPage = () => {
               as="h3"
               variant="h3"
             >
-              Powered by DhiWise
+              Generated with ❤️ from DhiWise
             </Text>
             <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:mx-[0] sm:px-[0] sm:w-[100%] w-[22%]">
               {/* <Img

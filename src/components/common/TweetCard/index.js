@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Column, Row, Img, Text, Stack } from "components";
+import { Column, Row, Img, Text } from "components";
 import { event } from '../../../constants/eventdetails';
 
 
@@ -9,11 +9,11 @@ const TweetCard = (props) => {
   const { content, about } = props?.tweetData;
   return (
     <Column
-      className="border border-gray_900 border-solid flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer"
+      className=" border-gray_900 border-solid flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:border-[3px] hover:border-dotted border-indigo-500/100"
       onClick={() => {
         window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}`);
       }}>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%] h-[90%]">
+      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
         <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
           <Img
             src="images/img_dhiwiselogo.png"
