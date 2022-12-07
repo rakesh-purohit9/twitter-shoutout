@@ -1,2 +1,2 @@
-export const EventHandle = "";
-export const EventHashTag = "";
+export const EventHandle = "AWSPune";
+export const EventHashTags = "ACDPune2022,DhiWise";
