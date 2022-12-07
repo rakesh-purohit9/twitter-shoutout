@@ -7,7 +7,7 @@ import { DhiWiseTweets } from "../../constants/tweets";
 const GiveawayPage = () => {
   return (
     <>
-      <Column className="bg-black_900 flex flex-col font-gilroy items-center justify-start mx-[auto] sm:p-[15px] md:p-[24px] p-[36px] w-[100%]">
+      <Column className="bg-black_900 flex flex-col font-sans items-center justify-start mx-[auto] sm:p-[15px] md:p-[24px] p-[36px] w-[100%]">
         <Column className="flex flex-col items-center justify-start max-w-[1241px] sm:mb-[14px] md:mb-[19px] mb-[28px] mx-[auto] sm:px-[15px] w-[100%]">
           <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:px-[0] w-[100%]">
             <Img
