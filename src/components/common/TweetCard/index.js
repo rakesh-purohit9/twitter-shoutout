@@ -11,10 +11,10 @@ const TweetCard = (props) => {
     <Column
       className="outline outline-1 outline-offset-1 outline-white flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:outline-[3px] hover:outline-dotted hover:outline-indigo-500/100"
       onClick={() => {
-        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags} ${id === 12 ? ',30Days30Usecases,OpenAPIs' : ""}`);
+        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}${id === 12 ? ',30Days30Usecases' : ""}`);
       }}>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
-        <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
+      <Row className="flex flex-row items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
+        <Row className="flex flex-row items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%] common-row">
           <Img
             src="images/img_dhiwiselogo.png"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
