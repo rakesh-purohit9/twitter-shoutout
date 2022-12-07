@@ -9,7 +9,7 @@ const TweetCard = (props) => {
   const { content, about, id } = props?.tweetData;
   return (
     <Column
-      className="outline-gray_900 outline-solid flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:outline-[3px] hover:outline-dotted hover:outline-indigo-500/100"
+      className="outline outline-1 outline-offset-1 outline-white flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:outline-[3px] hover:outline-dotted hover:outline-indigo-500/100"
       onClick={() => {
         window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags} ${id === 12 ? ',30Days30Usecases,OpenAPIs' : ""}`);
       }}>
