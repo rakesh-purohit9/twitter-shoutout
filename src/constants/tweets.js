@@ -50,7 +50,7 @@ If you’re here, I recommend you to come here. The team is fantastic and has go
     about: 'DhiWise Mascot'
   },{
     id:12,
-  content: `#30Days30Usecases are amazing to know if you’re at @${event.handle}. Visit @dhiwise booth, as they did 30 SaaS product integration with #OpenAPIs in 30 Days 💪.`,
+  content: `\#30Days30Usecases are amazing to know if you’re at @${event.handle}. Visit @dhiwise booth, as they did 30 SaaS product integration with #OpenAPIs in 30 Days 💪.`,
   about: 'DhiWise Usecases'
   }
 
