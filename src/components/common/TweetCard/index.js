@@ -13,7 +13,7 @@ const TweetCard = (props) => {
       onClick={() => {
         window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}`);
       }}>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
+      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%] h-[90%]">
         <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
           <Img
             src="images/img_dhiwiselogo.png"
@@ -66,7 +66,7 @@ const TweetCard = (props) => {
           Twitter
         </Text>
       </Row>
-      <Column className="bg-gradient  flex flex-col items-center justify-start md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[27px] p-[40px] sm:px-[15px] sm:py-[21px] rounded-radius8 w-[100%]">
+      {/* <Column className="bg-gradient  flex flex-col items-center justify-start md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[27px] p-[40px] sm:px-[15px] sm:py-[21px] rounded-radius8 w-[100%]">
         <Stack className="bg-black_900_66 h-[48px] p-[12px] sm:p-[6px] md:p-[8px] relative rounded-radius12 w-[35%]">
           <Img
             src="images/img_share.svg"
@@ -74,7 +74,7 @@ const TweetCard = (props) => {
             alt="share"
           />
         </Stack>
-      </Column>
+      </Column> */}
     </Column>
   )
 }
