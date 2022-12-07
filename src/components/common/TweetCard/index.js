@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Column, Row, Img, Text, Stack } from "components";
-import { EventHashTags } from '../../../constants/eventdetails';
+import { event } from '../../../constants/eventdetails';
 
 
 const TweetCard = (props) => {
@@ -11,7 +11,7 @@ const TweetCard = (props) => {
     <Column
       className="border border-gray_900 border-solid flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer"
       onClick={() => {
-        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${EventHashTags}`);
+        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}`);
       }}>
       <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[49%]">
         <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
