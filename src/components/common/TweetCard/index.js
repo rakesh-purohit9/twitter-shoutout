@@ -6,12 +6,12 @@ import { event } from '../../../constants/eventdetails';
 
 const TweetCard = (props) => {
 
-  const { content, about } = props?.tweetData;
+  const { content, about, id } = props?.tweetData;
   return (
     <Column
       className="outline-gray_900 outline-solid flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:outline-[3px] hover:outline-dotted hover:outline-indigo-500/100"
       onClick={() => {
-        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}`);
+        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags} ${id === 12 ? ',30Days30Usecases,OpenAPIs' : ""}`);
       }}>
       <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
         <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
