@@ -44,31 +44,31 @@ const GiveawayPage = () => {
               /> */}
               <Img
                 src="images/img_image2.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="Twitter"
                 onClick={() => window.open('https://twitter.com/DhiWise')}
               />
               <Img
                 src="images/img_image3.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="LinkedIn"
                 onClick={() => window.open('https://linkedin.com/company/DhiWise')}
               />
               <Img
                 src="images/img_image6.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="GitHub"
                 onClick={() => window.open('https://github.com/DhiWise')}
               />
               <Img
                 src="images/img_image5.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="YouTube"
                 onClick={() => window.open('https://youtube.com/@DhiWise')}
               />
               <Img
                 src="images/img_image4.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="Instagram"
                 onClick={() => window.open('https://instagram.com/DhiWise')}
               />
