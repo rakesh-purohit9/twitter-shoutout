@@ -13,7 +13,7 @@ const TweetCard = (props) => {
       onClick={() => {
         window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}`);
       }}>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[49%]">
+      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
         <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[57%]">
           <Img
             src="images/img_dhiwiselogo.png"
