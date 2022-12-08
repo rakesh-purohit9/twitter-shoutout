@@ -9,10 +9,10 @@ const GiveawayPage = () => {
     <>
       <Column className="bg-black_900 flex flex-col font-sans items-center justify-start mx-[auto] sm:p-[15px] md:p-[24px] p-[36px] w-[100%]">
         <Column className="flex flex-col items-center justify-start max-w-[1241px] sm:mb-[14px] md:mb-[19px] mb-[28px] mx-[auto] sm:px-[15px] w-[100%]">
-          <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:px-[0] w-[100%]">
+          <Row className="flex flex-row sm:flex-col md:flex-wrap sm:flex-wrap items-center justify-between sm:px-[0] w-[100%]">
             <Img
               src="images/img_group.svg"
-              className="flex-shrink-0 max-w-[100%] w-[14%]"
+              className="flex-shrink-0 max-w-[100%] w-[14%] sm:w-[50%]"
               alt="Group"
             />
             <Text
@@ -23,12 +23,12 @@ const GiveawayPage = () => {
               Click to Tweet for DhiWise
             </Text>
           </Row>
-          <Column className="flex flex-col items-center justify-start sm:mt-[34px] md:mt-[44px] mt-[64px] w-[100%]">
+          <Column className="flex flex-col items-center justify-start sm:mt-[34px] md:mt-[44px] mt-[64px] w-[100%] sm:mb-16">
             <Grid className="sm:gap-[14px] md:gap-[19px] gap-[28px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 min-h-[auto] w-[100%]">
               {DhiWiseTweets?.length > 0 ? DhiWiseTweets.map(tweetRecord => (<TweetCard key={tweetRecord?.id} tweetData={tweetRecord} />)) : "DhiWise is preparing for upcoming events"}
             </Grid>
           </Column>
-          <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-end justify-between mt-[120px] sm:mt-[63px] md:mt-[82px] sm:px-[0] w-[100%]">
+          <Row className="flex flex-row sm:justify-center sm:space-y-4 md:flex-wrap sm:flex-wrap items-end justify-between mt-[120px] sm:mt-[63px] md:mt-[82px] w-[100%] fixed bottom-0 bg-black_900 p-2">
             <Text
               className="font-normal mb-[2px] sm:mt-[3px] md:mt-[4px] mt-[6px] not-italic text-white_A700 w-[auto]"
               as="h3"
@@ -36,7 +36,7 @@ const GiveawayPage = () => {
             >
               Generated with ❤️ from DhiWise
             </Text>
-            <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:mx-[0] sm:px-[0] sm:w-[100%] w-[22%]">
+            <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:justify-center space-x-8 sm:mx-[0] sm:px-[0] sm:w-[100%] w-[22%]">
               {/* <Img
                 src="images/img_image1.png"
                 className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -44,31 +44,31 @@ const GiveawayPage = () => {
               /> */}
               <Img
                 src="images/img_image2.png"
-                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="Twitter"
                 onClick={() => window.open('https://twitter.com/DhiWise')}
               />
               <Img
                 src="images/img_image3.png"
-                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="LinkedIn"
                 onClick={() => window.open('https://linkedin.com/company/DhiWise')}
               />
               <Img
                 src="images/img_image6.png"
-                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="GitHub"
                 onClick={() => window.open('https://github.com/DhiWise')}
               />
               <Img
                 src="images/img_image5.png"
-                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="YouTube"
                 onClick={() => window.open('https://youtube.com/@DhiWise')}
               />
               <Img
                 src="images/img_image4.png"
-                className="sm:h-[20px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[20px] md:w-[16px] w-[24px] cursor-pointer"
+                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
                 alt="Instagram"
                 onClick={() => window.open('https://instagram.com/DhiWise')}
               />
