@@ -63,7 +63,7 @@ const TweetCard = (props) => {
           as="h3"
           variant="h3"
         >
-          Twitter
+          Tap me to tweet
         </Text>
       </Row>
       {/* <Column className="bg-gradient  flex flex-col items-center justify-start md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[27px] p-[40px] sm:px-[15px] sm:py-[21px] rounded-radius8 w-[100%]">
