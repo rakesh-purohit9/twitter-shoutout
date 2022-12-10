@@ -1,6 +1,6 @@
 export const event = {
-    handle: 'AWSPune',
-    hashtags: "ACDPune2022,AWSPune2022,BuildWithDhiWise💻"
+    handle: 'GDGPune',
+    hashtags: "DevFestPune2022,BuildWithDhiWise💻,GDGPune2022"
 }
 
 // export const event = {
