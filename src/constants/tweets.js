@@ -25,12 +25,12 @@ If you’re here, I recommend you to come here. The team is fantastic and has go
 },
 {
   id: 6,
-  content: `Played a quiz @DhiWise booth @${event.handle} and won this amazing swag of @DhiWise 😍🤩 `,
+  content: `Played a quiz @DhiWise booth @${event.handle} and won this amazing swag of @DhiWise 😍🤩. `,
   about: 'Quiz Winner'
 },
 {
   id: 7,
-  content: `Got these amazing swags from @DhiWise booth today at @${event.handle}`,
+  content: `Got these amazing swags from @DhiWise booth today at @${event.handle}. `,
   about: 'Swags'
 }, {
   id: 8,
@@ -46,7 +46,7 @@ If you’re here, I recommend you to come here. The team is fantastic and has go
   about: 'DhiWise Photo Frame'
 }, {
   id: 11,
-  content: `Flaunting with DhiWise Mascot Automaton @DhiWise booth @${event.handle}. See how stunning we look! 😉 `,
+  content: `Flaunting with DhiWise Mascot Automaton @DhiWise booth @${event.handle}. See how stunning we look! 😉. `,
   about: 'DhiWise Mascot'
 }, {
   id: 12,
