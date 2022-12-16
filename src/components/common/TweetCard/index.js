@@ -10,9 +10,7 @@ const TweetCard = (props) => {
   return (
     <Column
       className="outline outline-1 outline-offset-1 outline-white flex flex-col justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] rounded-radius12 w-[100%] cursor-pointer hover:outline-[3px] hover:outline-dotted hover:outline-indigo-500/100"
-      onClick={() => {
-        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}${id === 12 ? ',30Days30Usecases' : ""}`);
-      }}>
+    >
       <Row className="flex flex-row items-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
         <Row className="flex flex-row items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%] common-row">
           <Img
@@ -52,7 +50,9 @@ const TweetCard = (props) => {
           {content}
         </Text>
       </Column>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
+      <Row onClick={() => {
+        window.open(`http://twitter.com/intent/tweet?text=${content}&hashtags=${event.hashtags}${id === 12 ? ',30Days30Usecases' : ""}`);
+      }} className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
         <Img
           src="images/img_twitter.svg"
           className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -63,7 +63,27 @@ const TweetCard = (props) => {
           as="h3"
           variant="h3"
         >
-          Tap me to tweet
+          Click to Tweet
+        </Text>
+      </Row>
+
+      <Row onClick={() => {
+
+        navigator.clipboard.writeText(content);
+
+      }
+      } className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
+        <Img
+          src="images/img_image3.png"
+          className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
+          alt="twitter"
+        />
+        <Text
+          className="flex-grow font-light ml-[4px] text-bluegray_100"
+          as="h3"
+          variant="h3"
+        >
+          Copy for Linkedin
         </Text>
       </Row>
       {/* <Column className="bg-gradient  flex flex-col items-center justify-start md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[27px] p-[40px] sm:px-[15px] sm:py-[21px] rounded-radius8 w-[100%]">
