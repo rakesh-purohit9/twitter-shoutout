@@ -69,7 +69,7 @@ const TweetCard = (props) => {
 
       <Row onClick={() => {
 
-        navigator.clipboard.writeText(content);
+        navigator.clipboard.writeText(`${content} #${event?.hashtags?.replaceAll(',', " #")}`);
 
       }
       } className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]">
