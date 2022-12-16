@@ -20,7 +20,7 @@ const GiveawayPage = () => {
               as="h1"
               variant="h1"
             >
-              Click to Tweet for DhiWise
+              Shoutouts for DhiWise @ DevFest Ahmedabad
             </Text>
           </Row>
           <Column className="flex flex-col items-center justify-start sm:mt-[34px] md:mt-[44px] mt-[64px] w-[100%] sm:mb-16">
