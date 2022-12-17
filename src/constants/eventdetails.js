@@ -1,6 +1,6 @@
 export const event = {
-    handle: 'DevFestAhm',
-    hashtags: "#DevFestAhm,BuildWithDhiWise💻,GDGPune2022"
+    handle: 'GDGAhmedabad',
+    hashtags: "DevFestAhm,BuildWithDhiWise💻,DevFest2022"
 }
 
 // export const event = {
