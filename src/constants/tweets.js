@@ -34,7 +34,7 @@ export const DhiWiseTweets = [
   // },
   {
     id: 7,
-    content: `Got these amazing swags from @DhiWise booth today at @${event.handle}. `,
+    content: `Got these amazing swags from @DhiWise today at @${event.handle}. `,
     about: 'Swags'
   },
   // {
@@ -58,7 +58,7 @@ export const DhiWiseTweets = [
   // },
   {
     id: 12,
-    content: `DhiWise built usecases are amazing to know if you’re at @${event.handle}. Visit @DhiWise booth, as they did 30 SaaS product integration with OpenAPIs in 30 Days 💪.`,
+    content: `DhiWise built usecases are amazing to know if you’re at @${event.handle}. Visit @DhiWise, as they did 30 SaaS product integration with OpenAPIs in 30 Days 💪.`,
     about: 'DhiWise Usecases'
   }
 
