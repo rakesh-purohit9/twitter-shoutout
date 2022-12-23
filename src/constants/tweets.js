@@ -15,7 +15,7 @@ export const DhiWiseTweets = [
   // },
   {
     id: 3,
-    content: `I just had a demo on generating an application code in 5 minutes from a Figma, Today at @${event.handle}, by @DhiWise team & it's insane 🤯. A must-have developer tool for all the developers out there.`,
+    content: `I just had a demo on generating an application code in 5 minutes from a Figma, today at @${event.handle}, by @DhiWise team & it's insane 🤯. A must-have developer tool for all the developers out there.`,
     about: 'Took A Demo'
   }, {
     id: 4,
