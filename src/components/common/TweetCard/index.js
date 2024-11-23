@@ -65,9 +65,20 @@ const TweetCard = (props) => {
             `${content} #${event?.hashtags?.replaceAll(",", " #")}`
           );
           alert("Copied");
-          window.open(
-            "linkedin://shareArticle?mini=true&url=https://dhiwise.com"
-          );
+          // window.open(
+          //   "linkedin://shareArticle?mini=true&url=https://dhiwise.com"
+          // );
+          function shareOnLinkedIn() {
+            const url = encodeURIComponent("https://ogp.me/");
+            const title = encodeURIComponent("Open Graph Protocol");
+            const summary = encodeURIComponent(
+              "Learn about the Open Graph protocol for rich object representation."
+            );
+            const source = encodeURIComponent("ogp.me");
+            const shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}&source=${source}`;
+            window.open(shareUrl, "_blank");
+          }
+          shareOnLinkedIn();
         }}
         className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[22px] mt-[32px] sm:mt-[16px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]"
       >
