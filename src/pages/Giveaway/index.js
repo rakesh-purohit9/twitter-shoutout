@@ -3,10 +3,13 @@ import { Column, Row, Img, Text } from "components";
 import TweetCard from "../../components/common/TweetCard";
 import { DhiWiseTweets } from "../../constants/tweets";
 import { event } from "../../constants/eventdetails";
+import { useParams } from "react-router-dom";
 
 const GiveawayPage = () => {
   const [currentTweetIndex, setCurrentTweetIndex] = useState(null);
   const [seenTweets, setSeenTweets] = useState([]);
+  const params = useParams();
+  const {id} = params;
 
   // Function to get a random index from the tweets array
   const getRandomTweetIndex = () => {
@@ -17,28 +20,29 @@ const GiveawayPage = () => {
   useEffect(() => {
     // Set a random tweet index on initial render
     if (DhiWiseTweets.length > 0) {
-      const initialTweetIndex = getRandomTweetIndex();
+      // const initialTweetIndex = getRandomTweetIndex();
+      const initialTweetIndex = id;
       setCurrentTweetIndex(initialTweetIndex);
       setSeenTweets([initialTweetIndex]); // Mark this index as seen
     }
   }, []);
 
-  const handleRefreshTweet = () => {
-    // Get unseen tweets
-    const unseenTweets = DhiWiseTweets.filter((_, index) => !seenTweets.includes(index));
-    if (unseenTweets.length === 0) {
-      // If all tweets are seen, reset the seenTweets and pick a new random one
-      const newRandomIndex = getRandomTweetIndex();
-      setSeenTweets([newRandomIndex]);
-      setCurrentTweetIndex(newRandomIndex);
-    } else {
-      // Otherwise, pick a random unseen tweet
-      const randomUnseenIndex = Math.floor(Math.random() * unseenTweets.length);
-      const nextTweetIndex = DhiWiseTweets.indexOf(unseenTweets[randomUnseenIndex]);
-      setCurrentTweetIndex(nextTweetIndex);
-      setSeenTweets((prevSeenTweets) => [...prevSeenTweets, nextTweetIndex]);
-    }
-  };
+  // const handleRefreshTweet = () => {
+  //   // Get unseen tweets
+  //   const unseenTweets = DhiWiseTweets.filter((_, index) => !seenTweets.includes(index));
+  //   if (unseenTweets.length === 0) {
+  //     // If all tweets are seen, reset the seenTweets and pick a new random one
+  //     const newRandomIndex = getRandomTweetIndex();
+  //     setSeenTweets([newRandomIndex]);
+  //     setCurrentTweetIndex(newRandomIndex);
+  //   } else {
+  //     // Otherwise, pick a random unseen tweet
+  //     const randomUnseenIndex = Math.floor(Math.random() * unseenTweets.length);
+  //     const nextTweetIndex = DhiWiseTweets.indexOf(unseenTweets[randomUnseenIndex]);
+  //     setCurrentTweetIndex(nextTweetIndex);
+  //     setSeenTweets((prevSeenTweets) => [...prevSeenTweets, nextTweetIndex]);
+  //   }
+  // };
 
   const currentTweet = DhiWiseTweets[currentTweetIndex] || null;
 
@@ -67,12 +71,12 @@ const GiveawayPage = () => {
               DhiWise is preparing for upcoming events
             </Text>
           )}
-          <button
+          {/* <button
             className="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded"
             onClick={handleRefreshTweet}
           >
             Refresh Tweet
-          </button>
+          </button> */}
         </Column>
         <Row className="flex flex-row sm:justify-center md:flex-wrap items-end justify-between mt-30 sm:mt-16 md:mt-20 w-full fixed bottom-0 bg-black_900 p-2">
           <Text

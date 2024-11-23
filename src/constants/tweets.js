@@ -23,33 +23,8 @@ export const DhiWiseTweets = [
     about: "Took A Demo",
   },
   {
-    id: 7,
-    content: `Got these amazing swags from @DhiWise today at @${event.handle}. `,
-    about: "Swags",
-  },
-  {
-    id: 8,
-    content: `I just got myself this colorful tattoo😍 at @DhiWise booth @${event.handle}. Have yours NOW! `,
-    about: "DhiWise Tattoo",
-  },
-  {
-    id: 9,
-    content: `Having a tattoo @DhiWise booth on my hand, and this is giving me some superpower. Get yours when you pass by.  @${event.handle}. `,
-    about: "DhiWise Tattoo",
-  },
-  {
-    id: 10,
-    content: `Look How cool I look in this amazing frame by @DhiWise. Come to @DhiWise booth @${event.handle} and click cool photos here and show them to your friends 😎.`,
-    about: "DhiWise Photo Frame",
-  },
-  {
-    id: 11,
-    content: `Flaunting with DhiWise Mascot Automaton @DhiWise booth @${event.handle}. See how stunning we look! 😉. `,
-    about: "DhiWise Mascot",
-  },
-  {
-    id: 12,
-    content: `DhiWise built usecases are amazing to know if you’re at @${event.handle}. Visit @DhiWise, as they did 30 SaaS product integration with OpenAPIs in 30 Days 💪.`,
-    about: "DhiWise Usecases",
+    id: 5,
+    content: `@DhiWise converts Figma into application code with API Integration and common components. I am excited to know more about it.  @${event.handle}.`,
+    about: "Took A Demo",
   },
 ];

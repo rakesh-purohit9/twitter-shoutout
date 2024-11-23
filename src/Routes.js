@@ -8,7 +8,7 @@ const ProjectRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Giveaway />} />
+        <Route path="/:id" element={<Giveaway />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/dhiwise-dashboard" element={<Home />} />
       </Routes>
