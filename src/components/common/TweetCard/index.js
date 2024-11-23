@@ -65,20 +65,25 @@ const TweetCard = (props) => {
             `${content} #${event?.hashtags?.replaceAll(",", " #")}`
           );
           alert("Copied");
+          window.open(
+            "linkedin://shareArticle?mini=true&url=https://dhiwise.com"
+          );
         }}
-        className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]"
+        className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[22px] mt-[32px] sm:mt-[16px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]"
       >
         <Img
           src="images/img_image3.png"
-          className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
+          className="flex-shrink-0 sm:h-[26px] md:h-[34px] h-[48px] max-w-[100%] sm:w-[24px] md:w-[32px] w-[48px]"
           alt="linkedin"
         />
         <Text
-          className="flex-grow font-light ml-[4px] text-bluegray_100"
+          className="flex-grow font-light ml-[8px] text-bluegray_100"
           as="h3"
           variant="h3"
+          style={{ fontSize: "2em" }}
         >
-          Copy for LinkedIn
+          Copy
+          {/* Copy for LinkedIn */}
         </Text>
       </Row>
     </Column>
