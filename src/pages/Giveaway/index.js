@@ -43,7 +43,7 @@ const GiveawayPage = () => {
   const currentTweet = DhiWiseTweets[currentTweetIndex] || null;
 
   return (
-    <Column className="bg-black_900 flex flex-col font-sans items-center justify-start mx-auto sm:p-4 md:p-6 p-9 w-full">
+    <Column className="bg-black_900 flex flex-col font-sans items-center justify-start min-h-screen mx-auto sm:p-4 md:p-6 p-9 w-full">
       <Column className="flex flex-col items-center justify-start max-w-1241px sm:mb-4 md:mb-5 mb-7 mx-auto sm:px-4 w-full">
         <Row className="flex flex-row sm:flex-col md:flex-wrap items-center justify-between sm:px-0 w-full">
           <Img
