@@ -1,82 +1,122 @@
-import React from "react";
-
-import { Column, Row, Img, Text, Grid } from "components";
+import React, { useState, useEffect } from "react";
+import { Column, Row, Img, Text } from "components";
 import TweetCard from "../../components/common/TweetCard";
 import { DhiWiseTweets } from "../../constants/tweets";
+import { event } from "../../constants/eventdetails";
 
 const GiveawayPage = () => {
+  const [currentTweetIndex, setCurrentTweetIndex] = useState(null);
+  const [seenTweets, setSeenTweets] = useState([]);
+
+  // Function to get a random index from the tweets array
+  const getRandomTweetIndex = () => {
+    if (DhiWiseTweets.length === 0) return null; // If no tweets, return null
+    return Math.floor(Math.random() * DhiWiseTweets.length); // Random index
+  };
+
+  useEffect(() => {
+    // Set a random tweet index on initial render
+    if (DhiWiseTweets.length > 0) {
+      const initialTweetIndex = getRandomTweetIndex();
+      setCurrentTweetIndex(initialTweetIndex);
+      setSeenTweets([initialTweetIndex]); // Mark this index as seen
+    }
+  }, []);
+
+  const handleRefreshTweet = () => {
+    // Get unseen tweets
+    const unseenTweets = DhiWiseTweets.filter((_, index) => !seenTweets.includes(index));
+    if (unseenTweets.length === 0) {
+      // If all tweets are seen, reset the seenTweets and pick a new random one
+      const newRandomIndex = getRandomTweetIndex();
+      setSeenTweets([newRandomIndex]);
+      setCurrentTweetIndex(newRandomIndex);
+    } else {
+      // Otherwise, pick a random unseen tweet
+      const randomUnseenIndex = Math.floor(Math.random() * unseenTweets.length);
+      const nextTweetIndex = DhiWiseTweets.indexOf(unseenTweets[randomUnseenIndex]);
+      setCurrentTweetIndex(nextTweetIndex);
+      setSeenTweets((prevSeenTweets) => [...prevSeenTweets, nextTweetIndex]);
+    }
+  };
+
+  const currentTweet = DhiWiseTweets[currentTweetIndex] || null;
+
   return (
-    <>
-      <Column className="bg-black_900 flex flex-col font-sans items-center justify-start mx-[auto] sm:p-[15px] md:p-[24px] p-[36px] w-[100%]">
-        <Column className="flex flex-col items-center justify-start max-w-[1241px] sm:mb-[14px] md:mb-[19px] mb-[28px] mx-[auto] sm:px-[15px] w-[100%]">
-          <Row className="flex flex-row sm:flex-col md:flex-wrap sm:flex-wrap items-center justify-between sm:px-[0] w-[100%]">
-            <Img
-              src="images/img_group.svg"
-              className="flex-shrink-0 max-w-[100%] w-[14%] sm:w-[50%]"
-              alt="Group"
-            />
-            <Text
-              className="bg-black_900 flex-grow font-medium md:p-[13px] sm:p-[15px] px-[20px] py-[19px] rounded-radius6 text-white_A700"
-              as="h1"
-              variant="h1"
-            >
-              Shoutouts for DhiWise @ DevFest Baroda
+    <Column className="bg-black_900 flex flex-col font-sans items-center justify-start mx-auto sm:p-4 md:p-6 p-9 w-full">
+      <Column className="flex flex-col items-center justify-start max-w-1241px sm:mb-4 md:mb-5 mb-7 mx-auto sm:px-4 w-full">
+        <Row className="flex flex-row sm:flex-col md:flex-wrap items-center justify-between sm:px-0 w-full">
+          <Img
+            src="images/img_group.svg"
+            className="flex-shrink-0 max-w-full w-14% sm:w-50%"
+            alt="Group"
+          />
+          <Text
+            className="bg-black_900 flex-grow font-medium md:p-3 sm:p-4 px-5 py-5 rounded-radius6 text-white_A700"
+            as="h1"
+            variant="h1"
+          >
+            Shoutouts for DhiWise @ {event.name}
+          </Text>
+        </Row>
+        <Column className="flex flex-col items-center justify-start sm:mt-8 md:mt-11 mt-16 w-full sm:mb-16">
+          {currentTweet ? (
+            <TweetCard key={currentTweet.id} tweetData={currentTweet} />
+          ) : (
+            <Text className="text-white_A700" as="p" variant="body1">
+              DhiWise is preparing for upcoming events
             </Text>
-          </Row>
-          <Column className="flex flex-col items-center justify-start sm:mt-[34px] md:mt-[44px] mt-[64px] w-[100%] sm:mb-16">
-            <Grid className="sm:gap-[14px] md:gap-[19px] gap-[28px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 min-h-[auto] w-[100%]">
-              {DhiWiseTweets?.length > 0 ? DhiWiseTweets.map(tweetRecord => (<TweetCard key={tweetRecord?.id} tweetData={tweetRecord} />)) : "DhiWise is preparing for upcoming events"}
-            </Grid>
-          </Column>
-          <Row className="flex flex-row sm:justify-center sm:space-y-4 md:flex-wrap sm:flex-wrap items-end justify-between mt-[120px] sm:mt-[63px] md:mt-[82px] w-[100%] fixed bottom-0 bg-black_900 p-2">
-            <Text
-              className="font-normal mb-[2px] sm:mt-[3px] md:mt-[4px] mt-[6px] not-italic text-white_A700 w-[auto]"
-              as="h3"
-              variant="h3"
-            >
-              Generated with ❤️ from DhiWise
-            </Text>
-            <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:justify-center space-x-8 sm:mx-[0] sm:px-[0] sm:w-[100%] w-[22%]">
-              {/* <Img
-                src="images/img_image1.png"
-                className="sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
-                alt="facebook"
-              /> */}
-              <Img
-                src="images/img_image2.png"
-                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
-                alt="Twitter"
-                onClick={() => window.open('https://twitter.com/DhiWise')}
-              />
-              <Img
-                src="images/img_image3.png"
-                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
-                alt="LinkedIn"
-                onClick={() => window.open('https://linkedin.com/company/DhiWise')}
-              />
-              <Img
-                src="images/img_image6.png"
-                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
-                alt="GitHub"
-                onClick={() => window.open('https://github.com/DhiWise')}
-              />
-              <Img
-                src="images/img_image5.png"
-                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
-                alt="YouTube"
-                onClick={() => window.open('https://youtube.com/@DhiWise')}
-              />
-              <Img
-                src="images/img_image4.png"
-                className="sm:h-[30px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[30px] md:w-[16px] w-[24px] cursor-pointer"
-                alt="Instagram"
-                onClick={() => window.open('https://instagram.com/DhiWise')}
-              />
-            </Row>
-          </Row>
+          )}
+          <button
+            className="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded"
+            onClick={handleRefreshTweet}
+          >
+            Refresh Tweet
+          </button>
         </Column>
+        <Row className="flex flex-row sm:justify-center md:flex-wrap items-end justify-between mt-30 sm:mt-16 md:mt-20 w-full fixed bottom-0 bg-black_900 p-2">
+          <Text
+            className="font-normal mb-1 sm:mt-1 md:mt-1 mt-1 not-italic text-white_A700"
+            as="h3"
+            variant="h3"
+          >
+            Generated with ❤️ from DhiWise One
+          </Text>
+          <Row className="flex flex-row md:flex-wrap items-center justify-between sm:justify-center space-x-8 sm:mx-0 sm:px-0 sm:w-full w-22%">
+            <Img
+              src="images/img_image2.png"
+              className="sm:h-8 md:h-4 h-6 max-w-full sm:w-8 md:w-4 w-6 cursor-pointer"
+              alt="Twitter"
+              onClick={() => window.open("https://twitter.com/DhiWise")}
+            />
+            <Img
+              src="images/img_image3.png"
+              className="sm:h-8 md:h-4 h-6 max-w-full sm:w-8 md:w-4 w-6 cursor-pointer"
+              alt="LinkedIn"
+              onClick={() => window.open("https://linkedin.com/company/DhiWise")}
+            />
+            <Img
+              src="images/img_image6.png"
+              className="sm:h-8 md:h-4 h-6 max-w-full sm:w-8 md:w-4 w-6 cursor-pointer"
+              alt="GitHub"
+              onClick={() => window.open("https://github.com/DhiWise")}
+            />
+            <Img
+              src="images/img_image5.png"
+              className="sm:h-8 md:h-4 h-6 max-w-full sm:w-8 md:w-4 w-6 cursor-pointer"
+              alt="YouTube"
+              onClick={() => window.open("https://youtube.com/@DhiWise")}
+            />
+            <Img
+              src="images/img_image4.png"
+              className="sm:h-8 md:h-4 h-6 max-w-full sm:w-8 md:w-4 w-6 cursor-pointer"
+              alt="Instagram"
+              onClick={() => window.open("https://instagram.com/DhiWise")}
+            />
+          </Row>
+        </Row>
       </Column>
-    </>
+    </Column>
   );
 };
 
