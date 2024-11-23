@@ -37,12 +37,11 @@ const TweetCard = (props) => {
           {content}
         </Text>
       </Column>
-      <Row
+      {/* <Row
         onClick={() => {
           window.open(
-            `twitter://post/message=${content}&hashtags=${
-              event.hashtags
-            }${id === 12 ? ",30Days30Usecases" : ""}`
+            `twitter://post/message=${content}`
+            // &hashtags=${ event.hashtags }${id === 12 ? ",30Days30Usecases" : ""}
           );
         }}
         className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[100%]"
@@ -59,7 +58,7 @@ const TweetCard = (props) => {
         >
           Click to Tweet
         </Text>
-      </Row>
+      </Row> */}
       <Row
         onClick={() => {
           navigator.clipboard.writeText(

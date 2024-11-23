@@ -80,7 +80,7 @@ const GiveawayPage = () => {
             as="h3"
             variant="h3"
           >
-            Generated with ❤️ from DhiWise One
+            with ❤️ from DhiWise One
           </Text>
           <Row className="flex flex-row md:flex-wrap items-center justify-between sm:justify-center space-x-8 sm:mx-0 sm:px-0 sm:w-full w-22%">
             <Img
