@@ -64,18 +64,15 @@ const TweetCard = (props) => {
           navigator.clipboard.writeText(
             `${content} #${event?.hashtags?.replaceAll(",", " #")}`
           );
-          alert("Copied");
-          // window.open(
-          //   "linkedin://shareArticle?mini=true&url=https://dhiwise.com"
-          // );
+          alert("Copied. Post now.");
           function shareOnLinkedIn() {
-            const url = encodeURIComponent("https://ogp.me/");
-            const title = encodeURIComponent("Open Graph Protocol");
-            const summary = encodeURIComponent(
-              "Learn about the Open Graph protocol for rich object representation."
-            );
-            const source = encodeURIComponent("ogp.me");
-            const shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}&source=${source}`;
+            const url = encodeURIComponent("https://dhiwise.com/");
+            // const title = encodeURIComponent("Open Graph Protocol");
+            // const summary = encodeURIComponent(
+            //   "Learn about the Open Graph protocol for rich object representation."
+            // );
+            // const source = encodeURIComponent("ogp.me");
+            const shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
             window.open(shareUrl, "_blank");
           }
           shareOnLinkedIn();
@@ -93,7 +90,7 @@ const TweetCard = (props) => {
           variant="h3"
           style={{ fontSize: "2em" }}
         >
-          Copy
+          Copy to post
           {/* Copy for LinkedIn */}
         </Text>
       </Row>
